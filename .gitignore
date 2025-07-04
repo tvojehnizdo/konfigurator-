@@ -1,0 +1,17 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/.gitignore
+index 0000000000000000000000000000000000000000..6670e9221b663c47ae792e746d2cdfa85e4cba90 100644
+--- a//dev/null
++++ b/.gitignore
+@@ -0,0 +1,8 @@
++# Ignore log files
++*.log
++
++# Ignore OS-generated files
++.DS_Store
++Thumbs.db
++ehthumbs.db
++Icon?
+ 
+EOF
+)
